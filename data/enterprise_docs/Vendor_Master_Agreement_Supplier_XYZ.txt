@@ -1,0 +1,10 @@
+# Master Goods and Services Procurement Agreement
+**Contract ID:** VMA-SUP-XYZ-2024 | **Supplier:** Apex Consumer Goods Ltd (SUP-XYZ) | **Department:** Procurement
+
+## Section 3: Delivery Schedules, Lead Times and Service Levels
+1. Supplier SUP-XYZ agrees to deliver ordered goods to specified distribution centers (WH-001, WH-002, WH-CENTRAL) within a contracted lead time of 10 business days from PO transmission.
+2. On-Time In-Full (OTIF) delivery compliance must maintain an average of 95.0% measured across rolling 90-day periods.
+
+## Section 4: Delayed Shipment Penalties & Breach
+1. In the event Supplier fails to deliver ordered goods by the agreed expected delivery date, a late delivery penalty of 1.5% of total purchase order invoice value shall accrue per business day of delay, up to a maximum of 15%.
+2. For shipments delayed in excess of 7 calendar days without prior force majeure declaration, Retailer reserves the right to cancel the PO without penalty, purchase substitute merchandise from secondary vendors, and bill the net price variance back to Supplier.

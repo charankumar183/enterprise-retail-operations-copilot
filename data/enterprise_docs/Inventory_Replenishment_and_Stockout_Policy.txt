@@ -1,0 +1,21 @@
+# Enterprise Inventory Policy: Replenishment Thresholds & Stockout Escalation
+**Document ID:** POL-INV-2026 | **Department:** Supply Chain Planning | **Version:** 3.1
+
+## Section 1: Store Inventory Minimum Levels and Safety Stock
+All store locations (including Store 105 and Store 210) must maintain minimum safety stock equivalent to 14 days of average forward demand.
+Reorder triggers:
+1. When store quantity on hand reaches the reorder threshold, automated replenishment orders are generated nightly.
+2. For high-velocity Fast Moving Consumer Goods (FMCG) like Product P100 (UltraClean Pods), the reorder threshold is 45 units for Supercenters and 30 units for Express formats.
+
+## Section 2: Chronic Stockout Root Cause Analysis
+A SKU is classified under Chronic Stockout Status if store shelves experience out-of-stock events > 3 times in a 30-day window.
+Primary triggers include:
+- Supplier delivery delays exceeding lead time tolerances.
+- Demand spikes where daily sales velocity exceeds the statistical forecast by > 20%.
+- Inter-warehouse transfer bottlenecks between regional distribution hubs and retail stores.
+
+## Section 3: Emergency Escalation & Cross-Dock Transfer
+In the event of an out-of-stock condition on essential SKUs:
+1. The Store Manager must submit an Emergency Expedited Transfer Request to the Central Warehouse (WH-CENTRAL).
+2. Central replenishment dispatch must execute within 24 hours via dedicated LTL transport.
+3. The Inventory Planner must temporarily raise the safety stock multiplier to 2.5x until supplier reliability normalizes above 95%.

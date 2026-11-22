@@ -1,0 +1,7 @@
+# Enterprise Retail Pricing Policy: Everyday Low Price (EDLP) & Markdown Schedules
+**Document ID:** PRIC-GUIDE-009 | **Department:** Pricing & Revenue Management
+
+## Section 1: Price Change Authorization
+1. Price changes initiated at the corporate level take effect in store POS registers at 00:01 on the designated effective date.
+2. Electronic shelf labels (ESLs) automatically synchronize with central pricing servers within 4 minutes of activation.
+3. For non-ESL paper tag displays, store teams must execute physical tag replacement before doors open to customers.

@@ -1,0 +1,20 @@
+# Standard Operating Procedure: Inbound Freight & Warehouse Receiving Protocol
+**Document ID:** SOP-WH-004 | **Department:** Logistics & Warehouse Operations | **Version:** 4.2
+
+## Section 1: Pre-Dock Arrival & Verification
+Upon arrival at any enterprise distribution center (WH-001, WH-002, WH-CENTRAL, WH-WEST), the freight carrier must check in at the logistics gatehouse.
+1. The driver must surrender the physical Bill of Lading (BOL), Packing Slip, and purchase order confirmation.
+2. The gate clerk verifies the PO number in the Enterprise Warehouse Management System (WMS) within 15 minutes.
+3. If the PO status is marked as cancelled or has invalid destination authorization, freight entry is refused.
+
+## Section 2: Physical Seal and Damage Inspection
+Before breaking the trailer security seal:
+1. The receiving supervisor and carrier representative inspect the numbered high-security bolt seal.
+2. Confirm the seal number matches the BOL exactly. If the seal is compromised, record photo evidence and flag container for quarantine.
+3. Inspect pallet integrity for leaning stacks, crushed bottom boxes, moisture, or chemical odors.
+
+## Section 3: Barcode Scanning and Inventory Receipt
+1. Unload pallets using designated motorized pallet jacks and stage in the Inbound Receiving Lane.
+2. Scan the UCC-128 barcode on each pallet into the handheld terminal.
+3. Quantity discrepancies between physical piece count and advance shipping notice (ASN) exceeding 0% must be flagged in the WMS.
+4. Issue a formal Goods Receipt Note (GRN) within 2 hours of trailer unloading to release merchandise into active inventory.

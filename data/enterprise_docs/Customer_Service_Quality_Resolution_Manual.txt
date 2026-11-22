@@ -1,0 +1,8 @@
+# Customer Service Knowledge Base: Defective Merchandise & Quality Complaints
+**Document ID:** CS-KB-108 | **Department:** Customer Experience & Quality Assurance
+
+## Section 4: Handling Quality Defect Complaints for Product Y (AromaWave Diffuser)
+Product Y (AromaWave Ultrasonic Essential Oil Diffuser) has exhibited elevated return rates due to ultrasonic basin seal issues.
+1. Customer Complaint Protocol: When a customer reports oil leakage from the reservoir base or failure of mist dispersion, the service desk agent must immediately offer an unconditional replacement or full refund under Code QA-DEFECT.
+2. Return Condition: The item must not be restocked on store shelves. The store clerk must mark the item as 'Defective / Scrapped' in the inventory return ledger.
+3. Manufacturer Defect Tracking: Store customer care teams must log the serial number and batch code to assist corporate QA in escalating defect claims to Supplier SUP-XYZ.

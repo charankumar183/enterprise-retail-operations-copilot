@@ -1,0 +1,16 @@
+# Store Operations Daily Management Manual: Supercenter & Express Formats
+**Document ID:** SOP-STR-012 | **Department:** Retail Operations | **Effective:** 2026
+
+## Section 2: Morning Store Opening Routine (06:00 - 08:00)
+1. Store Manager or Assistant Manager disarms perimeter alarm and completes exterior safety walkthrough.
+2. Cash office supervisor prepares cash drawers with standard opening floats ($300 per standard lane, $150 per self-checkout).
+3. Inventory Specialist walks primary grocery, household, and electronics aisles to perform out-of-stock scanning. Any empty shelf facing with zero on-hand stock is logged into the handheld replenishment app.
+4. Receiving dock doors are opened for scheduled morning direct-store-delivery (DSD) bread, dairy, and beverage vendors.
+
+## Section 5: Daily Operations Reporting
+Store Managers are required to generate and submit the Store Daily Operations Performance Report by 22:30 nightly.
+The report must capture:
+- Total daily gross sales vs budgeted sales target.
+- Basket size and register transaction counts.
+- Zero-stock shelf scan alerts and critical replenishment requirements.
+- Customer return volumes, markdown adjustments, and employee attendance rosters.

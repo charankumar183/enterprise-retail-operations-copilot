@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enterprise AI Retail Operations & Supply Chain Assistant</title>
+  <link rel="stylesheet" href="/static/styles.css">
+  <!-- Chart.js for enterprise dashboards -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="brand-icon">🛒</div>
+      <div>
+        <div class="brand-title">Retail Copilot</div>
+        <div class="brand-subtitle">Advanced RAG & Supply Chain</div>
+      </div>
+    </div>
+
+    <ul class="nav-links">
+      <li class="nav-item active" onclick="switchTab('chat')">
+        <span>💬</span> AI Chat Assistant
+      </li>
+      <li class="nav-item" onclick="switchTab('inventory')">
+        <span>📊</span> Inventory Dashboard
+      </li>
+      <li class="nav-item" onclick="switchTab('products')">
+        <span>📦</span> Product Catalog
+      </li>
+      <li class="nav-item" onclick="switchTab('documents')">
+        <span>📁</span> Document Ingestion
+      </li>
+      <li class="nav-item" onclick="switchTab('citations')">
+        <span>📑</span> Source Citations
+      </li>
+      <li class="nav-item" onclick="switchTab('reports')">
+        <span>📄</span> Operations Reports
+      </li>
+      <li class="nav-item" onclick="switchTab('admin')">
+        <span>⚙️</span> Admin & Benchmarks
+      </li>
+    </ul>
+
+    <div class="sidebar-user">
+      <div>
+        <div id="currentUserLabel" style="font-weight: 600; font-size: 13px;">Marcus Vance</div>
+        <div class="user-badge" id="currentRoleBadge">Store Manager</div>
+      </div>
+      <button class="btn btn-secondary" style="padding: 4px 8px; font-size: 11px;" onclick="showLoginModal()">Switch</button>
+    </div>
+  </aside>
+
+  <!-- Main Wrapper -->
+  <div class="main-wrapper">
+    <!-- Top Navigation Bar -->
+    <header class="top-bar">
+      <div class="top-title" id="pageTitle">AI Retail Operations Assistant</div>
+      <div class="header-actions">
+        <label style="font-size: 12px; color: var(--text-muted);">Active Role Persona:</label>
+        <select class="role-select" id="roleSelector" onchange="changeRolePersona(this.value)">
+          <option value="Store Manager">Store Manager (Store 105)</option>
+          <option value="Supply Chain Analyst">Supply Chain Analyst</option>
+          <option value="Inventory Planner">Inventory Planner</option>
+          <option value="Category Manager">Category Manager</option>
+          <option value="Procurement Manager">Procurement Manager</option>
+          <option value="Administrator">Administrator</option>
+        </select>
+        <div style="display: flex; align-items: center; gap: 6px;">
+          <span style="width: 8px; height: 8px; border-radius: 50%; background-color: #10b981;"></span>
+          <span style="font-size: 12px; font-weight: 500; color: #10b981;">System Operational</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- TAB 1: AI Chat Assistant -->
+    <main class="content-panel active" id="tab-chat">
+      <div class="chips-container">
+        <span style="font-size: 12px; font-weight: 600; color: var(--text-muted); align-self: center;">Suggested Queries:</span>
+        <div class="chip" onclick="applySampleQuery('What are the standard receiving procedures for warehouse operations?')">📋 Standard Receiving Procedures</div>
+        <div class="chip" onclick="applySampleQuery('Show inventory availability for Product X across all warehouses.')">🔍 Product X Across Warehouses</div>
+        <div class="chip" onclick="applySampleQuery('Why is Product P100 frequently going out of stock?')">⚠️ Product P100 Stockout Root Cause</div>
+        <div class="chip" onclick="applySampleQuery('Which vendor supplies Product ABC?')">🏢 Vendor for Product ABC</div>
+        <div class="chip" onclick="applySampleQuery('Compare Promotion Policy Version 3 with Version 5.')">⚖️ Promotion Policy v3 vs v5</div>
+        <div class="chip" onclick="applySampleQuery('Generate a replenishment checklist for Store 210.')">📦 Replenishment Checklist Store 210</div>
+        <div class="chip" onclick="applySampleQuery('Which products have the highest return rate this month?')">🔄 Highest Return Rate Products</div>
+        <div class="chip" onclick="applySampleQuery('Show all delayed purchase orders for Supplier XYZ.')">⏰ Delayed POs Supplier XYZ</div>
+        <div class="chip" onclick="applySampleQuery('Generate a daily operations report for Store 105.')">📊 Store 105 Daily Report</div>
+      </div>
+
+      <div class="chat-container">
+        <div class="chat-header">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <span style="font-weight: 600; font-size: 14px;">Multi-Turn Conversational Session</span>
+            <span class="route-pill" id="activeIntentBadge">Intent: Auto-Routing</span>
+          </div>
+          <button class="btn btn-secondary" style="padding: 4px 10px; font-size: 12px;" onclick="clearChat()">Clear History</button>
+        </div>
+
+        <div class="chat-messages" id="chatMessages">
+          <!-- Default welcome message -->
+          <div class="msg-wrapper msg-assistant">
+            <div class="msg-bubble">
+              👋 <strong>Welcome to the Enterprise AI Retail Operations & Supply Chain Copilot!</strong><br><br>
+              I am connected to the Enterprise Relational Data Warehouse and the Retail Policy Document Repository using <strong>Advanced RAG</strong> without LangGraph.<br><br>
+              You can query inventory across warehouses, analyze stockout causes, compare corporate promotion policies, check delayed POs, or generate operational reports.
+            </div>
+            <div class="msg-meta">
+              <span>Enterprise Retail Copilot</span> • <span>System Ready</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chat Input & Metadata Filter Drawer -->
+        <div class="chat-input-area">
+          <div class="filter-row">
+            <span style="font-size: 11px; font-weight: 600; color: var(--text-muted); align-self: center;">Metadata Filters:</span>
+            <select class="filter-select" id="filterCategory">
+              <option value="">All Categories</option>
+              <option value="Household Cleaning">Household Cleaning</option>
+              <option value="Electronics">Electronics</option>
+              <option value="Grocery">Grocery</option>
+              <option value="Home Goods">Home Goods</option>
+            </select>
+            <select class="filter-select" id="filterStore">
+              <option value="">All Stores</option>
+              <option value="STORE-105">Store 105 (Dallas)</option>
+              <option value="STORE-210">Store 210 (Austin)</option>
+            </select>
+            <select class="filter-select" id="filterWarehouse">
+              <option value="">All Warehouses</option>
+              <option value="WH-001">WH-001 (North Texas)</option>
+              <option value="WH-CENTRAL">WH-CENTRAL (Midwest)</option>
+            </select>
+            <select class="filter-select" id="filterDocType">
+              <option value="">All Document Types</option>
+              <option value="Store SOPs">Store SOPs</option>
+              <option value="Warehouse Manuals">Warehouse Manuals</option>
+              <option value="Inventory Policies">Inventory Policies</option>
+              <option value="Promotion Documents">Promotion Documents</option>
+              <option value="Vendor Contracts">Vendor Contracts</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <input type="text" class="chat-input" id="chatQueryInput" placeholder="Ask a retail operations or supply chain question (e.g. 'Show inventory for Product X across warehouses')..." onkeydown="if(event.key==='Enter') sendChatMessage()">
+            <button class="btn btn-primary" id="btnSendChat" onclick="sendChatMessage()">
+              <span>Send</span> ➔
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- TAB 2: Inventory Dashboard -->
+    <main class="content-panel" id="tab-inventory">
+      <div class="grid-4" id="invMetricsCards">
+        <div class="card">
+          <div class="stat-label">Total Monitored SKUs</div>
+          <div class="stat-value" id="invTotalSkus">7</div>
+          <div class="stat-sub">Across 5 stores & 4 warehouses</div>
+        </div>
+        <div class="card">
+          <div class="stat-label">Critical Low Stock</div>
+          <div class="stat-value" style="color: var(--warning);" id="invLowStock">5</div>
+          <div class="stat-sub">Below safety threshold</div>
+        </div>
+        <div class="card">
+          <div class="stat-label">Total Out of Stock</div>
+          <div class="stat-value" style="color: var(--danger);" id="invOutOfStock">2</div>
+          <div class="stat-sub">Immediate transfer needed</div>
+        </div>
+        <div class="card">
+          <div class="stat-label">Distribution Hubs</div>
+          <div class="stat-value" id="invActiveHubs">4</div>
+          <div class="stat-sub">Avg utilization: 80.2%</div>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3 style="margin-bottom: 14px; font-size: 15px;">Warehouse vs Store Available Stock Distribution</h3>
+          <canvas id="inventoryStockChart" height="180"></canvas>
+        </div>
+        <div class="card">
+          <h3 style="margin-bottom: 14px; font-size: 15px;">Stockout Vulnerability Analysis</h3>
+          <canvas id="stockoutDonutChart" height="180"></canvas>
+        </div>
+      </div>
+
+      <div class="card">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+          <h3 style="font-size: 15px;">Live Enterprise Inventory Status Ledger</h3>
+          <button class="btn btn-secondary" onclick="loadInventoryDashboard()">Refresh Data</button>
+        </div>
+        <div style="overflow-x: auto;">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Product ID</th>
+                <th>Product Name</th>
+                <th>Location</th>
+                <th>Location ID</th>
+                <th>On Hand</th>
+                <th>Reserved</th>
+                <th>Reorder Level</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="inventoryTableBody">
+              <!-- Rendered dynamically -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+
+    <!-- TAB 3: Product Catalog Search -->
+    <main class="content-panel" id="tab-products">
+      <div class="card" style="margin-bottom: 20px;">
+        <div style="display: flex; gap: 12px; align-items: center;">
+          <input type="text" class="chat-input" id="productSearchInput" placeholder="Search by Product ID, Name, or Brand..." onkeyup="searchProducts()">
+          <select class="filter-select" id="productCategoryFilter" onchange="searchProducts()" style="padding: 10px 14px;">
+            <option value="">All Categories</option>
+            <option value="Household Cleaning">Household Cleaning</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Bakery & Grocery">Bakery & Grocery</option>
+            <option value="Beverages">Beverages</option>
+            <option value="Home Goods">Home Goods</option>
+          </select>
+          <button class="btn btn-primary" onclick="searchProducts()">Search</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3 style="margin-bottom: 16px; font-size: 15px;">Product Master Records</h3>
+        <div style="overflow-x: auto;">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Product ID</th>
+                <th>Product Name</th>
+                <th>Category</th>
+                <th>Department</th>
+                <th>Brand</th>
+                <th>Unit Price</th>
+                <th>Supplier ID</th>
+                <th>Lead Time</th>
+                <th>Reorder Level</th>
+              </tr>
+            </thead>
+            <tbody id="productTableBody">
+              <!-- Rendered dynamically -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+
+    <!-- TAB 4: Document Ingestion & Management -->
+    <main class="content-panel" id="tab-documents">
+      <div class="card" style="margin-bottom: 24px;">
+        <h3 style="margin-bottom: 12px; font-size: 16px;">Upload Enterprise Retail Document</h3>
+        <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 16px;">
+          Supports automated parsing, hierarchical parent-child chunking, vector embedding, and hybrid indexing for <strong>PDF, DOCX, TXT, CSV, and Excel</strong> files.
+        </p>
+
+        <form id="docUploadForm" onsubmit="handleDocumentUpload(event)" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) 120px; gap: 12px; align-items: end;">
+          <div>
+            <label style="font-size: 12px; font-weight: 600;">Document File:</label>
+            <input type="file" id="uploadFile" required style="width: 100%; margin-top: 4px; font-size: 12px;">
+          </div>
+          <div>
+            <label style="font-size: 12px; font-weight: 600;">Document Type:</label>
+            <select class="filter-select" id="uploadDocType" style="width: 100%; margin-top: 4px;">
+              <option value="Store SOPs">Store SOPs</option>
+              <option value="Warehouse Manuals">Warehouse Manuals</option>
+              <option value="Inventory Policies">Inventory Policies</option>
+              <option value="Pricing Guidelines">Pricing Guidelines</option>
+              <option value="Promotion Documents">Promotion Documents</option>
+              <option value="Vendor Contracts">Vendor Contracts</option>
+              <option value="Customer Service Manuals">Customer Service Manuals</option>
+              <option value="Procurement Guidelines">Procurement Guidelines</option>
+            </select>
+          </div>
+          <div>
+            <label style="font-size: 12px; font-weight: 600;">Department:</label>
+            <input type="text" id="uploadDepartment" class="filter-select" value="Operations" style="width: 100%; margin-top: 4px;">
+          </div>
+          <div>
+            <label style="font-size: 12px; font-weight: 600;">Version:</label>
+            <input type="text" id="uploadVersion" class="filter-select" value="1.0" style="width: 100%; margin-top: 4px;">
+          </div>
+          <button type="submit" class="btn btn-primary" id="btnUploadSubmit">Upload & Index</button>
+        </form>
+        <div id="uploadFeedback" style="margin-top: 12px; font-size: 13px; display: none;"></div>
+      </div>
+
+      <div class="card">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+          <h3 style="font-size: 15px;">Managed Enterprise Knowledge Base Documents</h3>
+          <button class="btn btn-secondary" onclick="loadDocumentsList()">Refresh Index</button>
+        </div>
+        <div style="overflow-x: auto;">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Filename</th>
+                <th>Type</th>
+                <th>Category / Doc Type</th>
+                <th>Version</th>
+                <th>Chunks</th>
+                <th>Size</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="documentTableBody">
+              <!-- Rendered dynamically -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+
+    <!-- TAB 5: Source Citations Viewer -->
+    <main class="content-panel" id="tab-citations">
+      <div class="card" style="margin-bottom: 20px;">
+        <h3 style="margin-bottom: 10px; font-size: 16px;">Audit-Grade Source Citations</h3>
+        <p style="font-size: 13px; color: var(--text-muted);">
+          Every AI-generated answer in the system provides direct provenance: Document Name, Section Reference, Page Number, and Confidence Score.
+        </p>
+      </div>
+
+      <div class="card" id="citationsDisplayCard">
+        <h4 style="margin-bottom: 14px; font-size: 14px;">Recent Citations From Active Session</h4>
+        <div id="citationsFullList">
+          <p style="color: var(--text-muted); font-size: 13px;">No queries executed yet in this session. Ask a question in the AI Chat tab to inspect live source citations.</p>
+        </div>
+      </div>
+    </main>
+
+    <!-- TAB 6: Operations Report Generator -->
+    <main class="content-panel" id="tab-reports">
+      <div class="card" style="margin-bottom: 24px;">
+        <h3 style="margin-bottom: 12px; font-size: 16px;">Generate Enterprise Operational Report</h3>
+        <div style="display: grid; grid-template-columns: 2fr 1.5fr 1fr; gap: 12px; align-items: end;">
+          <div>
+            <label style="font-size: 12px; font-weight: 600;">Report Type:</label>
+            <select class="filter-select" id="reportTypeSelect" style="width: 100%; margin-top: 4px; padding: 8px;">
+              <option value="daily_store_ops">Daily Store Operations Report (Store 105)</option>
+              <option value="replenishment_checklist">Store Replenishment Action Checklist (Store 210)</option>
+              <option value="delayed_purchase_orders">Delayed Purchase Orders & Vendor Risk (Supplier XYZ)</option>
+            </select>
+          </div>
+          <div>
+            <label style="font-size: 12px; font-weight: 600;">Target Facility / Supplier:</label>
+            <input type="text" class="filter-select" id="reportTargetId" value="STORE-105" style="width: 100%; margin-top: 4px; padding: 8px;">
+          </div>
+          <button class="btn btn-primary" onclick="generateReport()" style="height: 38px;">Generate Report</button>
+        </div>
+      </div>
+
+      <div class="card" id="generatedReportCard" style="display: none;">
+        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); padding-bottom: 12px; margin-bottom: 16px;">
+          <div>
+            <h3 id="reportTitle" style="font-size: 16px; font-weight: 700;">Daily Operations Report</h3>
+            <span id="reportTimestamp" style="font-size: 12px; color: var(--text-muted);">Generated just now</span>
+          </div>
+          <a class="btn btn-secondary" id="btnDownloadReport" href="#" download>Download JSON</a>
+        </div>
+
+        <div style="background-color: #f8fafc; padding: 14px; border-radius: 8px; margin-bottom: 16px;">
+          <strong>Executive Summary:</strong>
+          <p id="reportSummaryText" style="font-size: 13.5px; margin-top: 6px; line-height: 1.5;"></p>
+        </div>
+
+        <div class="grid-4" id="reportKeyMetricsGrid" style="margin-bottom: 16px;"></div>
+
+        <h4 style="font-size: 14px; margin-bottom: 8px;">Actionable Operational Directives:</h4>
+        <ul id="reportRecommendationsList" style="padding-left: 20px; font-size: 13px; line-height: 1.8; color: #334155;"></ul>
+      </div>
+    </main>
+
+    <!-- TAB 7: Admin Dashboard & Model Evaluation -->
+    <main class="content-panel" id="tab-admin">
+      <div class="grid-4" style="margin-bottom: 24px;">
+        <div class="card">
+          <div class="stat-label">FastAPI Backend Status</div>
+          <div class="stat-value" style="color: #10b981;">Online</div>
+          <div class="stat-sub">Swagger Docs at /docs</div>
+        </div>
+        <div class="card">
+          <div class="stat-label">Vector Store</div>
+          <div class="stat-value">ChromaDB</div>
+          <div class="stat-sub">Persistent Cosine Space</div>
+        </div>
+        <div class="card">
+          <div class="stat-label">Hybrid Search</div>
+          <div class="stat-value">Dense + BM25</div>
+          <div class="stat-sub">Alpha = 0.60</div>
+        </div>
+        <div class="card">
+          <div class="stat-label">Routing Architecture</div>
+          <div class="stat-value">Agentic (No LG)</div>
+          <div class="stat-sub">Intent Classifier Layer</div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-bottom: 24px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+          <div>
+            <h3 style="font-size: 15px;">Embedding Model Benchmark & Performance Evaluation</h3>
+            <p style="font-size: 12px; color: var(--text-muted);">Comparing Sentence Transformers vs BAAI BGE on Precision, Recall, Accuracy, Latency & Hallucination Rate</p>
+          </div>
+          <button class="btn btn-primary" onclick="runEvaluationBenchmark()">Run Benchmark Evaluation</button>
+        </div>
+
+        <div style="overflow-x: auto;">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Embedding Model</th>
+                <th>Retrieval Precision@3</th>
+                <th>Retrieval Recall@3</th>
+                <th>Response Accuracy</th>
+                <th>Average Latency</th>
+                <th>Hallucination Rate</th>
+                <th>MRR Score</th>
+              </tr>
+            </thead>
+            <tbody id="evaluationTableBody">
+              <tr>
+                <td><strong>sentence-transformers/all-MiniLM-L6-v2</strong></td>
+                <td><span class="badge badge-success">87.5%</span></td>
+                <td><span class="badge badge-success">93.8%</span></td>
+                <td>93.8%</td>
+                <td>4.8 ms</td>
+                <td><span class="badge badge-info">0.9%</span></td>
+                <td>0.895</td>
+              </tr>
+              <tr>
+                <td><strong>BAAI/bge-small-en-v1.5</strong></td>
+                <td><span class="badge badge-success">85.0%</span></td>
+                <td><span class="badge badge-success">91.2%</span></td>
+                <td>91.2%</td>
+                <td>5.4 ms</td>
+                <td><span class="badge badge-info">1.3%</span></td>
+                <td>0.871</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3 style="margin-bottom: 14px; font-size: 15px;">Live System Audit Logs & Operational Traces</h3>
+        <div style="overflow-x: auto;">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>User / Role</th>
+                <th>Query</th>
+                <th>Intent Route</th>
+                <th>Latency</th>
+                <th>SQL Query</th>
+                <th>Timestamp</th>
+              </tr>
+            </thead>
+            <tbody id="auditTableBody">
+              <!-- Rendered dynamically -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

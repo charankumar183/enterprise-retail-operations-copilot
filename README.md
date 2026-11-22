@@ -4,9 +4,9 @@
 [![PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL%20%2F%20MySQL-blue.svg)](https://www.postgresql.org/)
 [![ChromaDB](https://img.shields.io/badge/VectorDB-ChromaDB-orange.svg)](https://www.trychroma.com/)
 [![Docker](https://img.shields.io/badge/Docker-Ready-blue.svg?logo=docker)](https://www.docker.com/)
-[![Tests](https://img.shields.io/badge/Tests-15%20Passed-brightgreen.svg)]()
+![Tests](https://img.shields.io/badge/Tests-15%20Passed-brightgreen.svg)
 
-An enterprise AI copilot designed for large retail chains, hypermarkets, and omni-channel retail enterprises. Integrates relational databases (PostgreSQL/MySQL), unstructured enterprise documents (12 categories across PDF, DOCX, TXT, CSV, Excel), and an Advanced RAG architecture implemented without LangGraph. The application is containerized and verified in a local environment.
+An enterprise AI copilot designed for large retail chains, hypermarkets, and omni-channel retail enterprises. Integrates relational databases (PostgreSQL/MySQL), 12 unstructured enterprise documents across PDF, DOCX, TXT, CSV, and Excel formats, and an Advanced RAG architecture implemented without LangGraph. The application is containerized and verified in a local environment.
 
 ---
 
@@ -29,7 +29,7 @@ An enterprise AI copilot designed for large retail chains, hypermarkets, and omn
 
 3. **Structured Retail Data Warehouse (14 Relational Tables):**
    - Product Master, Inventory, Sales Transactions, Purchase Orders, Suppliers, Customers, Promotions, Store Information, Warehouse Information, Shipments, Returns, Pricing History, Demand Forecast, Employee Information.
-   -- Deployed on **PostgreSQL** with support for **MySQL**. Database connection settings are managed through environment variables and are not hardcoded in the source code.
+   - Deployed on **PostgreSQL** with support for **MySQL**. Database connection settings are managed through environment variables and are not hardcoded in the source code.
 
 4. **Security & Role-Based Access Control (RBAC):**
    - JWT authentication enforcing 6 roles: Store Manager, Supply Chain Analyst, Inventory Planner, Category Manager, Procurement Manager, and Administrator.

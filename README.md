@@ -12,7 +12,7 @@ An enterprise AI copilot designed for large retail chains, hypermarkets, and omn
 
 ## 🌟 Key Architecture & Capabilities
 
-1. **Mandatory Advanced RAG Features (100% Implemented):**
+1. **Mandatory Advanced RAG Features:**
    - **Document Ingestion:** Multi-format parser for PDF, DOCX, TXT, CSV, and Excel.
    - **Intelligent Chunking:** Recursive character chunking + Metadata-based chunking with configurable size and overlap.
    - **Parent-Child Retrieval:** Dense indexing of 350-character child chunks; returns complete 1500-character parent sections for context.
@@ -29,7 +29,7 @@ An enterprise AI copilot designed for large retail chains, hypermarkets, and omn
 
 3. **Structured Retail Data Warehouse (14 Relational Tables):**
    - Product Master, Inventory, Sales Transactions, Purchase Orders, Suppliers, Customers, Promotions, Store Information, Warehouse Information, Shipments, Returns, Pricing History, Demand Forecast, Employee Information.
-   - Deployed on **PostgreSQL** (`postgresql://postgres:Charan%40123@localhost:5433/retail_copilot_db`) with full support for **MySQL** (`mysql+pymysql://root:Charan%40123@localhost:3306/retail_copilot_db`).
+   -- Deployed on **PostgreSQL** with support for **MySQL**. Database connection settings are managed through environment variables and are not hardcoded in the source code.
 
 4. **Security & Role-Based Access Control (RBAC):**
    - JWT authentication enforcing 6 roles: Store Manager, Supply Chain Analyst, Inventory Planner, Category Manager, Procurement Manager, and Administrator.
@@ -91,7 +91,9 @@ python tests/test_backend_core.py
 
 ---
 
-## 👥 Pre-Configured Test Accounts (Password: `admin123`)
+ ## 👥 Pre-Configured Test Accounts
+
+**Note:** These are local development/demo accounts only. Change the default passwords before deploying the application to any shared or public environment. Never use demo credentials in production.
 
 | Username | Role Persona | Full Name | Focus Area |
 | :--- | :--- | :--- | :--- |
@@ -112,5 +114,4 @@ python tests/test_backend_core.py
 - [Public Cloud Deployment Guide (AWS, Azure, GCP)](docs/DEPLOYMENT_GUIDE.md)
 - [Technical Architecture & Component Documentation](docs/TECHNICAL_DOCUMENTATION.md)
 - [Dataset Specification (14 Tables & 12 Documents)](docs/DATASET_SPECIFICATION.md)
-- [10–15 Minute Video Demonstration Script](docs/VIDEO_DEMO_SCRIPT.md)
 - [Executive Presentation Slides](docs/PRESENTATION.md)

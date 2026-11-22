@@ -137,3 +137,24 @@ Enforced via JWT Bearer tokens:
 - **Category Manager:** Pricing guidelines, promotion policy comparisons, brand catalog audits.
 - **Procurement Manager:** Vendor agreements, delayed purchase orders, supplier reliability scoring.
 - **Administrator:** Full administrative control, document deletion, user creation, benchmark evaluation.
+
+---
+
+## 6. Deployment Architecture
+
+The application is architected for zero-downtime, containerized deployment using Docker Compose and reverse-proxied by Nginx:
+
+```mermaid
+flowchart LR
+    Client([Client Browser]) -->|HTTP / HTTPS| Nginx[Nginx Reverse Proxy :80/:443]
+    Nginx -->|Proxy Pass :8000| App[FastAPI Application Container]
+    App <-->|SQLAlchemy Pooling :5432| PG[(PostgreSQL Container :5432)]
+    App <-->|Vector IO| Chroma[(ChromaDB Persistent Volume)]
+```
+
+- **Containerized Stack:**
+  - `enterprise-retail-nginx` (Nginx Alpine reverse proxy on ports 80/443).
+  - `enterprise-retail-copilot` (FastAPI backend and embedded SPA on port 8000).
+  - `enterprise-retail-postgres` (PostgreSQL 15 relational database on port 5432).
+- **Public Cloud Compatibility:**
+  - Docker container is stateless and designed to deploy directly to AWS ECS / App Runner, Google Cloud Run, or Azure Container Apps.

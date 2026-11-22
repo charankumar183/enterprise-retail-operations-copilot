@@ -29,7 +29,7 @@ ML PROJECT_3/
 ├── frontend/                          # Enterprise single-page application (HTML, CSS, JS, Chart.js)
 ├── docker/                            # Dockerfile, docker-compose.yml, nginx.conf
 ├── docs/                              # Comprehensive technical documentation & deliverables
-├── tests/                             # Automated pytest test suites (13 unit & integration tests)
+├── tests/                             # Automated pytest test suites (15 unit & integration tests)
 ├── requirements.txt                   # Production dependency manifest
 └── README.md                          # Quickstart guide & repository index
 ```

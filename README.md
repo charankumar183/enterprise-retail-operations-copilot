@@ -6,7 +6,7 @@
 [![Docker](https://img.shields.io/badge/Docker-Ready-blue.svg?logo=docker)](https://www.docker.com/)
 [![Tests](https://img.shields.io/badge/Tests-15%20Passed-brightgreen.svg)]()
 
-Production-ready enterprise AI copilot designed for large retail chains, hypermarkets, and omni-channel retail enterprises. Integrates relational databases (PostgreSQL/MySQL with 14 tables), unstructured enterprise documents (12 categories across PDF, DOCX, TXT, CSV, Excel), and an **Agentic Advanced RAG architecture implemented without LangGraph**.
+An enterprise AI copilot designed for large retail chains, hypermarkets, and omni-channel retail enterprises. Integrates relational databases (PostgreSQL/MySQL), unstructured enterprise documents (12 categories across PDF, DOCX, TXT, CSV, Excel), and an Advanced RAG architecture implemented without LangGraph. The application is containerized and verified in a local environment.
 
 ---
 

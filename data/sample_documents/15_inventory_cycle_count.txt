@@ -1,0 +1,11 @@
+Inventory Cycle Count and Variance Procedure
+SYNTHETIC DEMONSTRATION DATA — NOT AN OFFICIAL RETAIL POLICY
+
+1. Daily counts
+Count high-risk and low-stock SKUs each morning. Record counted quantity, system quantity, variance, verifier and timestamp.
+
+2. Variance investigation
+Investigate differences involving receiving errors, transfers, theft suspicions and return adjustments. Do not modify stock before supervisory approval.
+
+3. Variance closure
+Attach approved documentation and update warehouse or store inventory through the controlled inventory system.

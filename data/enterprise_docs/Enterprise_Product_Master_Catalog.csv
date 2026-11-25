@@ -1,8 +1,0 @@
-product_id,product_name,category,department,brand,unit_price,supplier_id,lead_time_days
-P100,UltraClean Dishwasher Pods 60-Pack,Household Cleaning,Home Care,Apex Clean,18.99,SUP-XYZ,10
-P-ABC,EcoFriendly Botanical Laundry Detergent 64oz,Household Cleaning,Home Care,Verdant Eco,14.49,SUP-ABC,5
-P-XYZ,Lumina Smart Color Wi-Fi LED Bulb 4-Pack,Electronics,Hardware,Lumina,39.99,SUP-TECH,14
-P-GROC1,Organic Artisan Sourdough Loaf 24oz,Bakery & Grocery,Fresh Grocery,Pinnacle Farm,5.99,SUP-GROC,2
-P-BEV1,Sparkling Glacier Spring Water 12-Pack,Beverages,Grocery,Cascade Pure,8.99,SUP-BEV,4
-PRODUCT-X,OmniGuard Wireless Security Camera HD,Electronics,Hardware,Lumina,79.99,SUP-TECH,14
-PRODUCT-Y,AromaWave Ultrasonics Essential Oil Diffuser,Home Goods,Home Care,Apex Clean,29.99,SUP-XYZ,10

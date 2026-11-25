@@ -1,0 +1,11 @@
+Promotion Policy — Version 5
+SYNTHETIC DEMONSTRATION DATA — NOT AN OFFICIAL RETAIL POLICY
+
+1. Eligibility
+Version 5 requires both Category Manager and Procurement Manager approval for discounts above 10 percent. Store notices must be issued at least 72 hours before launch.
+
+2. Discount rules
+Version 5 permits up to 20 percent discount when the margin guardrail is approved and stock allocation is confirmed. Unauthorized manual price overrides are prohibited.
+
+3. Reconciliation
+Version 5 adds daily promotion reconciliation with documented exception owner, and requires store-level stock availability checks before publication.

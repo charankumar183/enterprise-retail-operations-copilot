@@ -1,0 +1,25 @@
+from pathlib import Path
+import matplotlib.pyplot as plt
+from matplotlib.patches import FancyBboxPatch,FancyArrowPatch
+fig,ax=plt.subplots(figsize=(15,7.5));ax.set_xlim(0,16);ax.set_ylim(0,8);ax.axis('off')
+fig.patch.set_facecolor('#F5F8FD');ax.set_facecolor('#F5F8FD')
+def node(x,y,w,h,label,color='#153B62'):
+    p=FancyBboxPatch((x,y),w,h,boxstyle='round,pad=0.12,rounding_size=0.18',linewidth=0,facecolor=color);ax.add_patch(p)
+    ax.text(x+w/2,y+h/2,label,ha='center',va='center',fontsize=10,fontweight='bold',color='white')
+def arrow(x1,y1,x2,y2):ax.add_patch(FancyArrowPatch((x1,y1),(x2,y2),arrowstyle='-|>',mutation_scale=17,lw=1.7,color='#6B93B7',connectionstyle='arc3,rad=0.0'))
+ax.text(.6,7.5,'Enterprise AI Retail Operations Copilot — System Architecture',fontsize=20,fontweight='bold',color='#13365A')
+node(.7,5.78,3.1,.9,'React Portal + JWT / RBAC')
+node(5.5,5.78,3.0,.9,'FastAPI Intent Router','#2163D4')
+node(10.5,6.35,4,.8,'Document RAG Search','#0F766E')
+node(10.5,5.15,4,.8,'SQL Analytics','#0F766E')
+node(10.5,3.95,4,.8,'Report Generator','#0F766E')
+arrow(3.8,6.2,5.5,6.2);arrow(8.5,6.2,10.5,6.7);arrow(8.5,6.2,10.5,5.55);arrow(8.5,6.2,10.5,4.35)
+node(.7,2.75,3.5,1.0,'Doc Parsing + Chunking')
+node(5.2,2.75,3.5,1.0,'Vector & BM25 Retrieval','#2267E0')
+node(10.7,2.55,3.5,.9,'ChromaDB Vector Store')
+node(10.7,.95,3.5,.9,'PostgreSQL Enterprise Data')
+node(5.2,.95,3.5,.9,'Answer + Source Citations','#0F766E')
+arrow(4.2,3.25,5.2,3.25);arrow(8.7,3.25,10.7,3.0);arrow(12.45,3.95,12.45,3.45);arrow(12.45,5.15,12.45,1.85);arrow(10.7,3,8.7,1.42);arrow(5.2,1.42,2.8,5.78)
+ax.text(.7,.3,'Hybrid semantic / BM25 • multi-query expansion • parent-child retrieval • rerank • context compression',fontsize=10,color='#597592')
+out=Path(__file__).parent/'docs'/'architecture.png';fig.savefig(out,dpi=160,bbox_inches='tight');plt.close(fig)
+print(out)

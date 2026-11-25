@@ -1,72 +1,30 @@
-# Technical Documentation: Enterprise AI Retail Operations Copilot
+# Technical Documentation
 
-## 1. System Components & Module Organization
+## Objective
 
-```
-ML PROJECT_3/
-├── backend/
-│   ├── app/
-│   │   ├── main.py                    # Application entrypoint & startup orchestrator
-│   │   ├── config.py                  # Pydantic Settings & environment variables
-│   │   ├── database.py                # SQLAlchemy engine & session factory
-│   │   ├── models/                    # Relational data schema (14 tables + auth + docs + audit)
-│   │   ├── schemas/                   # Pydantic request/response validation schemas
-│   │   ├── services/
-│   │   │   ├── auth_service.py        # Password hashing, JWT creation & RBAC enforcement
-│   │   │   ├── seeding_service.py     # Automatic database schema creation & synthetic data seeder
-│   │   │   ├── document_parser.py     # Multi-format parser (PDF, DOCX, TXT, CSV, Excel)
-│   │   │   ├── chunking_service.py    # Recursive chunking & parent-child hierarchical splits
-│   │   │   ├── embedding_service.py   # Embedding models (Sentence Transformers & BGE) & benchmarks
-│   │   │   ├── vector_store.py        # ChromaDB persistent client with local index fallback
-│   │   │   ├── hybrid_retriever.py    # Dense vector + BM25 keyword reciprocal fusion
-│   │   │   ├── advanced_rag.py        # 10 mandatory Advanced RAG pipeline features
-│   │   │   ├── agentic_router.py      # Non-LangGraph intent classifier & dynamic router
-│   │   │   ├── sql_analytics.py       # Parameterized SQL analytics & stockout root-cause analyzer
-│   │   │   ├── report_generator.py    # Daily store ops & replenishment checklist generator
-│   │   │   └── evaluation_service.py  # Precision, Recall, Accuracy, Latency, Hallucination benchmarking
-│   │   └── api/
-│   │       └── v1/                    # REST API routers (auth, chat, products, inventory, docs, reports, feedback, eval)
-├── frontend/                          # Enterprise single-page application (HTML, CSS, JS, Chart.js)
-├── docker/                            # Dockerfile, docker-compose.yml, nginx.conf
-├── docs/                              # Comprehensive technical documentation & deliverables
-├── tests/                             # Automated pytest test suites (15 unit & integration tests)
-├── requirements.txt                   # Production dependency manifest
-└── README.md                          # Quickstart guide & repository index
-```
+Build a production-oriented academic demonstration that can search enterprise retail knowledge, query SQL inventory and sales data, create supply-chain reports, and cite its sources.
 
----
+## Implementation map
 
-## 2. Advanced RAG Implementation Details
+- `models.py`: product master, inventory, sales transactions, POs, suppliers, customers, promotions, store info, warehouse info, shipments, returns, pricing history, demand forecast, employees, complaints, user/auth, reports, audit logging.
+- `seed.py`: reproducible seed of 120 products, five stores, four warehouses, suppliers, orders, sales, returns and forecasts. Changes persist in PostgreSQL volume.
+- `auth.py`: JWT verification, Argon2 password hashing, role dependencies.
+- `rag.py`: multi-format parsing, metadata-aware section parents, RecursiveCharacterTextSplitter with configured overlap, Sentence Transformers embeddings, ChromaDB storage, lexical BM25 plus semantic hybrid, query expansion and multi-query merging via RRF, parent–child context, optional cross-encoder, context compression, cited answer generation, per-user conversation memory in SQL.
+- `analytics.py`: deterministic intent routing and SQLAlchemy analytics; never executes arbitrary text-to-SQL generated from prompts.
+- `reporting.py`: generated report PDF with evidence list, page and section values as available.
+- `evaluation.py`: retrieval precision/recall/latency against 30 labeled questions. Do not report hallucination/answer-accuracy metrics without explicit judging.
+- `embedding_benchmark.py`: quantitative comparison of two embeddings with equal corpus and question sets.
+- `main.py`: documented REST endpoints; Swagger enabled by FastAPI.
+- `frontend/src/main.jsx`: responsive React portal, real API requests, JWT, chat, inventory, product search, document management, reports, evaluation, administration.
 
-### Hierarchical Parent-Child Retrieval
-In retail operations, retrieving a tiny paragraph without the surrounding context leads to loss of critical policy criteria (such as approval thresholds or penalty schedules).
-- **Chunking Pipeline:**
-  1. The document is split into **Parent Chunks** ($1500$ characters) representing cohesive business sections.
-  2. Each Parent Chunk is subdivided into **Child Chunks** ($350$ characters, $100$ character overlap).
-  3. Child chunks are embedded into ChromaDB with dense embeddings and indexed into the BM25 inverted index.
-  4. At search time, the hybrid retriever identifies the most relevant child chunks, and the pipeline fetches the complete parent chunk from the relational database.
+## Deployment topology
 
-### Hybrid Retrieval & Reciprocal Fusion
-Vector similarity struggles with precise SKU numbers or exact store IDs, while keyword matching fails on paraphrased policy questions. Fusing both yields optimal results:
-$$\text{Score} = 0.60 \cdot \text{VectorScore} + 0.40 \cdot \text{BM25Score}$$
+Docker Compose runs: PostgreSQL on an internal network, FastAPI published on port 8000, frontend built using Node 22 and served from Nginx on port 5173. Named PostgreSQL volume and bound `outputs` directory persist data across restarts. Public cloud requires additional infrastructure work detailed in `CLOUD_DEPLOYMENT.md`.
 
-### Agentic Routing Without LangGraph
-Routing decisions are evaluated via an intent classifier that inspects semantic indicators, query verbs, and referenced entities:
-- **`Report Generator`:** Queries requesting daily summaries or replenishment checklists.
-- **`SQL Analytics`:** Queries requesting live warehouse stock, supplier lookup, return rates, or delayed purchase orders.
-- **`Combined Analytics & RAG`:** Queries investigating root causes of stockouts, combining SQL queries with policy citations.
-- **`RAG Search`:** Policy interpretation, SOP guidance, and contract clause lookup.
+## Source citation semantics
 
----
+AI answers provide a reference to file name, section, original PDF page where known, plus the RRF retrieval rank score. This score is not a calibrated confidence probability. Non-page-based file formats correctly display `N/A` for page reference. Answers with insufficient evidence are explicitly limited rather than invented.
 
-## 3. Security & Role-Based Access Control
+## Performance and impact
 
-- **Token Standard:** JWT Bearer (HMAC SHA-256)
-- **Token Expiry:** Configurable (default 24 hours)
-- **Pre-seeded Accounts:**
-  - `admin` (Role: Administrator, Password: `admin123`)
-  - `manager` (Role: Store Manager, Password: `admin123`)
-  - `analyst` (Role: Supply Chain Analyst, Password: `admin123`)
-  - `planner` (Role: Inventory Planner, Password: `admin123`)
-  - `category` (Role: Category Manager, Password: `admin123`)
-  - `procurement` (Role: Procurement Manager, Password: `admin123`)
+Do not claim a verified 80–90% search-time reduction until actual baseline timing data is collected. Sample evaluation measures retrieval relevance, not real-world productivity outcomes. Use `data/evaluation/test_questions.json` as reproducible evidence labels; report all test conditions and question counts.

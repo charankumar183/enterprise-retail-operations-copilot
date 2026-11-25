@@ -1,0 +1,121 @@
+id,sku,name,category,price,supplier_id
+1,P001,Rice 001,Grocery,68,2
+2,P002,Olive Oil 002,Electronics,171,3
+3,P003,Headphones 003,Apparel,265,4
+4,P004,T-Shirt 004,Personal Care,270,5
+5,P005,Shampoo 005,Home & Kitchen,60,6
+6,P006,Coffee 006,Beverages,122,7
+7,P007,Detergent 007,Grocery,292,8
+8,P008,Backpack 008,Electronics,223,9
+9,P009,Juice 009,Apparel,288,10
+10,P010,Sneakers 010,Personal Care,259,11
+11,P011,Tea 011,Home & Kitchen,233,12
+12,P012,Cereal 012,Beverages,130,13
+13,P013,Soap 013,Grocery,9,14
+14,P014,Tablet 014,Electronics,49,15
+15,P015,Jacket 015,Apparel,64,16
+16,P016,Lamp 016,Personal Care,155,17
+17,P017,Pasta 017,Home & Kitchen,58,18
+18,P018,Milk 018,Beverages,238,19
+19,P019,Towel 019,Grocery,13,20
+20,P020,Biscuits 020,Electronics,259,21
+21,P021,Rice 021,Apparel,168,22
+22,P022,Olive Oil 022,Personal Care,115,23
+23,P023,Headphones 023,Home & Kitchen,211,24
+24,P024,T-Shirt 024,Beverages,136,25
+25,P025,Shampoo 025,Grocery,186,1
+26,P026,Coffee 026,Electronics,190,2
+27,P027,Detergent 027,Apparel,200,3
+28,P028,Backpack 028,Personal Care,270,4
+29,P029,Juice 029,Home & Kitchen,47,5
+30,P030,Sneakers 030,Beverages,182,6
+31,P031,Tea 031,Grocery,53,7
+32,P032,Cereal 032,Electronics,293,8
+33,P033,Soap 033,Apparel,283,9
+34,P034,Tablet 034,Personal Care,157,10
+35,P035,Jacket 035,Home & Kitchen,155,11
+36,P036,Lamp 036,Beverages,242,12
+37,P037,Pasta 037,Grocery,80,13
+38,P038,Milk 038,Electronics,166,14
+39,P039,Towel 039,Apparel,20,15
+40,P040,Biscuits 040,Personal Care,196,16
+41,P041,Rice 041,Home & Kitchen,194,17
+42,P042,Olive Oil 042,Beverages,244,18
+43,P043,Headphones 043,Grocery,224,19
+44,P044,T-Shirt 044,Electronics,54,20
+45,P045,Shampoo 045,Apparel,212,21
+46,P046,Coffee 046,Personal Care,291,22
+47,P047,Detergent 047,Home & Kitchen,263,23
+48,P048,Backpack 048,Beverages,67,24
+49,P049,Juice 049,Grocery,225,25
+50,P050,Sneakers 050,Electronics,267,1
+51,P051,Tea 051,Apparel,259,2
+52,P052,Cereal 052,Personal Care,211,3
+53,P053,Soap 053,Home & Kitchen,276,4
+54,P054,Tablet 054,Beverages,140,5
+55,P055,Jacket 055,Grocery,223,6
+56,P056,Lamp 056,Electronics,296,7
+57,P057,Pasta 057,Apparel,253,8
+58,P058,Milk 058,Personal Care,270,9
+59,P059,Towel 059,Home & Kitchen,273,10
+60,P060,Biscuits 060,Beverages,20,11
+61,P061,Rice 061,Grocery,122,12
+62,P062,Olive Oil 062,Electronics,74,13
+63,P063,Headphones 063,Apparel,33,14
+64,P064,T-Shirt 064,Personal Care,275,15
+65,P065,Shampoo 065,Home & Kitchen,60,16
+66,P066,Coffee 066,Beverages,227,17
+67,P067,Detergent 067,Grocery,248,18
+68,P068,Backpack 068,Electronics,80,19
+69,P069,Juice 069,Apparel,254,20
+70,P070,Sneakers 070,Personal Care,125,21
+71,P071,Tea 071,Home & Kitchen,70,22
+72,P072,Cereal 072,Beverages,241,23
+73,P073,Soap 073,Grocery,248,24
+74,P074,Tablet 074,Electronics,287,25
+75,P075,Jacket 075,Apparel,136,1
+76,P076,Lamp 076,Personal Care,294,2
+77,P077,Pasta 077,Home & Kitchen,213,3
+78,P078,Milk 078,Beverages,165,4
+79,P079,Towel 079,Grocery,288,5
+80,P080,Biscuits 080,Electronics,264,6
+81,P081,Rice 081,Apparel,253,7
+82,P082,Olive Oil 082,Personal Care,213,8
+83,P083,Headphones 083,Home & Kitchen,229,9
+84,P084,T-Shirt 084,Beverages,111,10
+85,P085,Shampoo 085,Grocery,158,11
+86,P086,Coffee 086,Electronics,145,12
+87,P087,Detergent 087,Apparel,12,13
+88,P088,Backpack 088,Personal Care,24,14
+89,P089,Juice 089,Home & Kitchen,84,15
+90,P090,Sneakers 090,Beverages,242,16
+91,P091,Tea 091,Grocery,275,17
+92,P092,Cereal 092,Electronics,258,18
+93,P093,Soap 093,Apparel,192,19
+94,P094,Tablet 094,Personal Care,110,20
+95,P095,Jacket 095,Home & Kitchen,141,21
+96,P096,Lamp 096,Beverages,256,22
+97,P097,Pasta 097,Grocery,246,23
+98,P098,Milk 098,Electronics,269,24
+99,P099,Towel 099,Apparel,262,25
+100,P100,Biscuits 100,Personal Care,230,1
+101,P101,Rice 101,Home & Kitchen,293,2
+102,P102,Olive Oil 102,Beverages,25,3
+103,P103,Headphones 103,Grocery,156,4
+104,P104,T-Shirt 104,Electronics,170,5
+105,P105,Shampoo 105,Apparel,242,6
+106,P106,Coffee 106,Personal Care,58,7
+107,P107,Detergent 107,Home & Kitchen,232,8
+108,P108,Backpack 108,Beverages,271,9
+109,P109,Juice 109,Grocery,140,10
+110,P110,Sneakers 110,Electronics,239,11
+111,P111,Tea 111,Apparel,101,12
+112,P112,Cereal 112,Personal Care,225,13
+113,P113,Soap 113,Home & Kitchen,253,14
+114,P114,Tablet 114,Beverages,40,15
+115,P115,Jacket 115,Grocery,144,16
+116,P116,Lamp 116,Electronics,263,17
+117,P117,Pasta 117,Apparel,197,18
+118,P118,Milk 118,Personal Care,57,19
+119,P119,Towel 119,Home & Kitchen,107,20
+120,P120,Biscuits 120,Beverages,218,21

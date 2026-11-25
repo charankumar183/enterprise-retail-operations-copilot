@@ -1,0 +1,322 @@
+{
+  "stop-windows.ps1": {
+    "bytes": 47,
+    "sha256": "00d2bb52b5b2fdf7afebf66e580d94bedb8717227ba75f94f155067fd779bafe"
+  },
+  ".gitignore": {
+    "bytes": 113,
+    "sha256": "cc06dffc9b973b9ff751cb549da2fa1781ad926a6dd057faf7cacff7c9c0168b"
+  },
+  "docker-compose.yml": {
+    "bytes": 1108,
+    "sha256": "11819a00fe9fbdac9cd721afffc21f6b1308658f828d4f9b9821fe443a9716e0"
+  },
+  "create_presentation.py": {
+    "bytes": 7676,
+    "sha256": "8b29f5576c58be89cd66b83cdea6e5cd083b57d6787f7d0fd775fdfd45a07659"
+  },
+  "generate_sample_assets.py": {
+    "bytes": 17009,
+    "sha256": "24a1a86134f6893741cfe16bd6401a6409301c1b77ec540f9e7140ff80c101a1"
+  },
+  ".env.example": {
+    "bytes": 478,
+    "sha256": "290869a9129a3a1619c1f632853cf272e17448e2224274a260a49d7385633032"
+  },
+  "start-windows.ps1": {
+    "bytes": 1369,
+    "sha256": "c9933cfd3ddc2fb0fbf76600cc6df86465632fe52dd9437bbbd749d823e6f6a4"
+  },
+  "create_architecture_image.py": {
+    "bytes": 1868,
+    "sha256": "73298b7e0138c2ada786a50ded7e141a75a357287da0679da681f75c8ff64d04"
+  },
+  "README.md": {
+    "bytes": 8532,
+    "sha256": "c5a74f14e5e88a5edfea96bc8b920c7ed3d6813190023e8b88747d53863c82ed"
+  },
+  "outputs/.gitkeep": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "backend/Dockerfile": {
+    "bytes": 406,
+    "sha256": "5d54612c3521978db7a0d203cb8bd801899a837a92c038630f6fa6150bb282e6"
+  },
+  "backend/requirements.txt": {
+    "bytes": 554,
+    "sha256": "e6414cd04e32e06a689554bf3c8f878f5cacaadf481cb5a1a21745a06ec54e7a"
+  },
+  "frontend/Dockerfile": {
+    "bytes": 257,
+    "sha256": "658df372a07e3f6c696dfc6d0c0ed2c48bef0d55a8743ce1e144ed6129bbe8b0"
+  },
+  "frontend/vite.config.js": {
+    "bytes": 163,
+    "sha256": "05c9cbce0c4995eb7a2f401f623e9daa8e2bbc4dfcefb25f66ae9dcaae5d60ed"
+  },
+  "frontend/package.json": {
+    "bytes": 372,
+    "sha256": "de33916d35c7510bac48307e51d4c4fde0ed68fde9aeb34ad093d8f5b26d947c"
+  },
+  "frontend/nginx.conf": {
+    "bytes": 118,
+    "sha256": "3f7e356d05ac78dfc747b05c41551885915a3fdec5d5a6cfd88f8a3ae8e738e7"
+  },
+  "frontend/index.html": {
+    "bytes": 325,
+    "sha256": "9f9be5291eae896b36c8b95f6dd249a50957390ae41d155eca247b47ebc024cd"
+  },
+  "data/create_structured_csv.py": {
+    "bytes": 4038,
+    "sha256": "06e88094e4605a9df9583ddd3cc0b8001a0c6538bdabf339714d3fdc9e819394"
+  },
+  "docs/demo_script.md": {
+    "bytes": 1493,
+    "sha256": "78bc3a0a252d2cc4050af7a1f235f0398eb44b4e8e0660cc81e9a82ee98a7c7d"
+  },
+  "docs/SETUP_GUIDE.md": {
+    "bytes": 2829,
+    "sha256": "f97407307490b84678c171db2a81ddc5ae449ccb686cc56425efabe960a5eb35"
+  },
+  "docs/CLOUD_DEPLOYMENT.md": {
+    "bytes": 2502,
+    "sha256": "4c59aab2435ce9610fc6fe7f968aec5aceee5d390f3a99f76943ec36b172d46f"
+  },
+  "docs/TECHNICAL_DOCUMENTATION.md": {
+    "bytes": 2901,
+    "sha256": "96557d670211229bf6b5f6f380186e2860dd8a782f7ab429dc1429a08e0ff018"
+  },
+  "docs/ARCHITECTURE.md": {
+    "bytes": 2381,
+    "sha256": "afe925ae54d3a4a7250628008742d4dd4f1430f1fcb429deede1d05d83dcc3a4"
+  },
+  "docs/VALIDATION_REPORT.md": {
+    "bytes": 2471,
+    "sha256": "ae9b9477bb5de3c9c5d8be3f06a6078d73973c6e59313ea7b48c7508b3a65d71"
+  },
+  "docs/Original_Capstone_Project_Brief.pdf": {
+    "bytes": 144441,
+    "sha256": "d3315c4ad022e3d49e2ba283ec266cd8a324e3492109ff4d65858e13f5fb166d"
+  },
+  "docs/architecture.png": {
+    "bytes": 142715,
+    "sha256": "6c6018209562163774b39c05f0144f004c1e083a11e588d1cb8f8a08c9e48c81"
+  },
+  "docs/EVALUATION_REPORT.md": {
+    "bytes": 1547,
+    "sha256": "10ddb49727b73f04226af82395bc52d2352e568e9ddf133668d25376ef2fd9e8"
+  },
+  "presentation/Retail_Operations_Copilot_Capstone.pptx": {
+    "bytes": 49971,
+    "sha256": "baa863122176e23aecd1f6ad786a79c7d45eab46efb5c777c4a0542dbbf4e4ef"
+  },
+  "data/structured/promotions.csv": {
+    "bytes": 3953,
+    "sha256": "c5a4437b958148b98373f55184330c49a7d78636b4e54c2495a22edfc1471632"
+  },
+  "data/structured/demand_forecast.csv": {
+    "bytes": 12602,
+    "sha256": "8a63db39ddcd1d444d677c5cc9d60c674d1e606e29d5246f1bf5b2060a947b34"
+  },
+  "data/structured/product_master.csv": {
+    "bytes": 4585,
+    "sha256": "f20cb4686c191c9f8eef1b8e26af275cc99d8bf1823993f4055aedd964a97b82"
+  },
+  "data/structured/stores.csv": {
+    "bytes": 134,
+    "sha256": "d67cf6e8488ba3bb0b1963a01b24c494782103a4f14ff499d9d68d15343cc5f0"
+  },
+  "data/structured/suppliers.csv": {
+    "bytes": 1344,
+    "sha256": "ba6766bf936558ce9ebce0e37a88ef7ee7f1a180738579bc9fb478ed17116525"
+  },
+  "data/structured/inventory.csv": {
+    "bytes": 18661,
+    "sha256": "63d216913b56ea7d3acb9881e8a155414fc5abfb75d02ba6461974b3d85ee198"
+  },
+  "data/structured/sales_transactions.csv": {
+    "bytes": 28648,
+    "sha256": "aba267a5bef052b7dd660a15a06406a7db9b3cb247cc7a2a29da35cd5f9f5497"
+  },
+  "data/structured/purchase_orders.csv": {
+    "bytes": 5069,
+    "sha256": "0fd4278274f2ec7606a1d14ad82cfba58b27fcae4f74322d8205f6af0195e5ef"
+  },
+  "data/structured/warehouses.csv": {
+    "bytes": 123,
+    "sha256": "4eab51e228a9e8e5ed9175c41f85be6e07aa06506525092673c59bfd9e106800"
+  },
+  "data/structured/shipments.csv": {
+    "bytes": 2500,
+    "sha256": "707727d9889fde5c481be0d37e041a69445b1d9c19ada8a61b62176cadea9040"
+  },
+  "data/structured/returns.csv": {
+    "bytes": 7226,
+    "sha256": "d10357e88e56be34d5fe92ecf264fc57222349ddba7eca9ac51ac9750e8ae855"
+  },
+  "data/structured/pricing_history.csv": {
+    "bytes": 3379,
+    "sha256": "142be396089bfc3afd6cb50d602e4e14feb06b3668784dd22ffc345b25f5ee50"
+  },
+  "data/structured/customers.csv": {
+    "bytes": 1498,
+    "sha256": "3da496d1d9da453c80d4e31e05533583638e8f5a3cbf5f1701cb98ac0635d431"
+  },
+  "data/structured/complaints.csv": {
+    "bytes": 3341,
+    "sha256": "487d14bdd1cb75246bef9467349a17f3c06bbf708af049b44cf7cbaf4723eaaf"
+  },
+  "data/structured/employees.csv": {
+    "bytes": 1743,
+    "sha256": "ad613d4e06734d5471c1b3c992f861462f30265b5d2d7923e22f5530793b868b"
+  },
+  "data/metadata/document_manifest.json": {
+    "bytes": 3834,
+    "sha256": "b4b038cac6f0cd99165ffbf68d86d8fed2db5b2b972b55249940cafec1ea29b1"
+  },
+  "data/evaluation/test_questions.json": {
+    "bytes": 4476,
+    "sha256": "a6ddbd209e96b7af7ca67dd7bdf9c65d2ae69784ccc1063e7c53d999defbf3fa"
+  },
+  "data/sample_documents/09_customer_service_manual.txt": {
+    "bytes": 746,
+    "sha256": "2908b1252624ca72f24714f0d3958e286c8c71b6309fa114c0ca933f8cdfc01e"
+  },
+  "data/sample_documents/07_vendor_agreement.pdf": {
+    "bytes": 2552,
+    "sha256": "0935f99b086c2c24969dda0183dd7770b5d73b3c4a3edf532d8629b342114e8e"
+  },
+  "data/sample_documents/12_merchandising_guidelines.txt": {
+    "bytes": 606,
+    "sha256": "9eb035b1b0626ac5160461debdc618a02f575cfb7c881c7b2aa4ae2cb7721d1e"
+  },
+  "data/sample_documents/10_logistics_sop.pdf": {
+    "bytes": 2445,
+    "sha256": "023e0a566d86e97c4a84d00bd7677237ef1da3c521a55ff4d10e2fbffcdef69f"
+  },
+  "data/sample_documents/04_pricing_guidelines.pdf": {
+    "bytes": 2503,
+    "sha256": "bc39c90cd3aeb0e14352092fdaea0ddb1c44c316efa151452b2c693e50ece020"
+  },
+  "data/sample_documents/15_inventory_cycle_count.txt": {
+    "bytes": 561,
+    "sha256": "a81e2326d80fd15099c7566753338d0ec9b4d1ec7fc34adc08421105a28fcd1d"
+  },
+  "data/sample_documents/11_procurement_guidelines.docx": {
+    "bytes": 37639,
+    "sha256": "55626772b20fa714a52da50be4119e52d3aaaa9b58f03f615c138b52abd1a8b7"
+  },
+  "data/sample_documents/08_product_catalog_guidance.docx": {
+    "bytes": 37592,
+    "sha256": "c869116774ed9ad8eec262a5004ca09df7c90df6374ea4cf392331b219e39eda"
+  },
+  "data/sample_documents/16_customer_complaints_trends.pdf": {
+    "bytes": 2454,
+    "sha256": "120f3021d21a4ab758b2bbb2eb55d163a229ef7f7cb4fb90d777328b52c965cf"
+  },
+  "data/sample_documents/18_store_replenishment_plan.xlsx": {
+    "bytes": 4124,
+    "sha256": "032fb6378c6192c4e012c90aac56ccd81b31cd27323e7826d67612a47fc127fd"
+  },
+  "data/sample_documents/13_supply_chain_report.pdf": {
+    "bytes": 2560,
+    "sha256": "0e84557934db1a4d0af3728c2f2002057bdd68f99c68c0a349f8aea9835139ee"
+  },
+  "data/sample_documents/06_promotion_policy_v5.txt": {
+    "bytes": 634,
+    "sha256": "16674fad517a989ced15d9b57c5160d31c08a335fd95a2ff8cbd7104634149c4"
+  },
+  "data/sample_documents/02_warehouse_receiving_manual.docx": {
+    "bytes": 37675,
+    "sha256": "bbb8043119f16c08991266ddc772951d1ba3806a500dcb96ca8a83a2ccc7b504"
+  },
+  "data/sample_documents/05_promotion_policy_v3.docx": {
+    "bytes": 37520,
+    "sha256": "23d4a421522b307cd422997083104529113331bab5fee52a75bfbc7b94363d50"
+  },
+  "data/sample_documents/14_store_returns_policy.docx": {
+    "bytes": 37627,
+    "sha256": "eb0cc17142bf7f15d99e1a7c3d14bd31d5cd073ce3c5aed4b6c60764134a25fc"
+  },
+  "data/sample_documents/17_supplier_contacts.csv": {
+    "bytes": 203,
+    "sha256": "857897fc7cc5ad9f6d906739a8caafde18b237677b32a1a92a2661b6e551fef3"
+  },
+  "data/sample_documents/03_inventory_replenishment_policy.txt": {
+    "bytes": 949,
+    "sha256": "d329fba8bdc0aa412d24a24f91fd2c932f35480e9ad7be22754f18e8a34a7e0a"
+  },
+  "data/sample_documents/01_store_operations_sop.pdf": {
+    "bytes": 2680,
+    "sha256": "a57e7b7b3668c823c436597bc1ff8d82163cca149b15b1ee1f73f167a858e80d"
+  },
+  "frontend/src/style.css": {
+    "bytes": 14232,
+    "sha256": "16cdc565cb9e13e6ff2ed8f73b4dc726749f74d58f400a267a7fa2c258acca9a"
+  },
+  "frontend/src/main.jsx": {
+    "bytes": 26177,
+    "sha256": "fe3f9a082b0c81230e8d5db145c31ef42a762a92f8d1af49eb6504f15bf642e4"
+  },
+  "backend/tests/test_sql_analytics.py": {
+    "bytes": 1811,
+    "sha256": "3942a88c432ab9041cb93e7770b4bf49d64a21fc815ae1f44e0cfdccfda51b83"
+  },
+  "backend/tests/smoke_api.py": {
+    "bytes": 1319,
+    "sha256": "5fb0ce6c949c3feb4877381ff599eb15811bf19e5f8f1c5ebdd983b679a882d3"
+  },
+  "backend/tests/test_core.py": {
+    "bytes": 1715,
+    "sha256": "632b4496e80f75740130b7c9707b12d9fd9e6f57982f88e0f524e18d3e420dda"
+  },
+  "backend/app/models.py": {
+    "bytes": 6126,
+    "sha256": "8dfe85d961af96612847f22e239bafd5e80428eae20de51d16b31e415d9ae969"
+  },
+  "backend/app/seed.py": {
+    "bytes": 4554,
+    "sha256": "9aa77c61eb80f5407492b8d72da927dde782321ae38442f627d7a01cf8ce0970"
+  },
+  "backend/app/embedding_benchmark.py": {
+    "bytes": 2155,
+    "sha256": "de2f8bce4a52d8d4bc2c2679c3a523157bd5f0a3cb7daa5916e7c2ba761b9c66"
+  },
+  "backend/app/rag.py": {
+    "bytes": 11479,
+    "sha256": "d653d6d4395f940652f9e33e27ed674999be32a154b3c1119999665598d3cd3e"
+  },
+  "backend/app/evaluation.py": {
+    "bytes": 1124,
+    "sha256": "d856825ee4427046254b8ab670728e78e65a1ce0c971a3ab455a81e8f40ea6aa"
+  },
+  "backend/app/main.py": {
+    "bytes": 22004,
+    "sha256": "30d2a7a3b8c256e7bc3a053b43c0e16ae3ba5016c787d7eae3f6b2f627f85e95"
+  },
+  "backend/app/analytics.py": {
+    "bytes": 6545,
+    "sha256": "6827d4a6b21cc732ce8080ae434b13f4a54773c78a7cbbf01c8953c544a4ecbb"
+  },
+  "backend/app/config.py": {
+    "bytes": 1221,
+    "sha256": "f61dd9355e40cbbbfcf199a255cc6df2f05eaee313de569463abedab3b4da3b3"
+  },
+  "backend/app/__init__.py": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "backend/app/db.py": {
+    "bytes": 413,
+    "sha256": "30ed02c442679c575a378a4abee5b9d3ba5f51e906761263f9f75de1cda98d40"
+  },
+  "backend/app/auth.py": {
+    "bytes": 1800,
+    "sha256": "9b418af79c1235d825cbd63551149807a8203ce8f2bf3da4493d3ea70e70abcb"
+  },
+  "backend/app/reporting.py": {
+    "bytes": 2083,
+    "sha256": "ae86c1c9804805ef2bd248cf3da319f9319d2266275f10cdad5c62a694d9c33c"
+  }
+}

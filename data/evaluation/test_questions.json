@@ -1,0 +1,182 @@
+[
+  {
+    "question": "What is the warehouse receiving verification procedure?",
+    "expected_documents": [
+      "02_warehouse_receiving_manual.docx"
+    ]
+  },
+  {
+    "question": "What happens to damaged cartons during receiving?",
+    "expected_documents": [
+      "02_warehouse_receiving_manual.docx"
+    ]
+  },
+  {
+    "question": "How do staff complete warehouse putaway?",
+    "expected_documents": [
+      "02_warehouse_receiving_manual.docx"
+    ]
+  },
+  {
+    "question": "What is the reorder threshold for a retail store?",
+    "expected_documents": [
+      "03_inventory_replenishment_policy.txt"
+    ]
+  },
+  {
+    "question": "How should we investigate Product P100 stockouts?",
+    "expected_documents": [
+      "03_inventory_replenishment_policy.txt"
+    ]
+  },
+  {
+    "question": "Generate a replenishment checklist for Store 210",
+    "expected_documents": [
+      "03_inventory_replenishment_policy.txt"
+    ]
+  },
+  {
+    "question": "How do stores reconcile cash at closing?",
+    "expected_documents": [
+      "01_store_operations_sop.pdf"
+    ]
+  },
+  {
+    "question": "What is recorded in the daily store handover?",
+    "expected_documents": [
+      "01_store_operations_sop.pdf"
+    ]
+  },
+  {
+    "question": "Who approves changes to retail prices?",
+    "expected_documents": [
+      "04_pricing_guidelines.pdf"
+    ]
+  },
+  {
+    "question": "How must historical prices be recorded?",
+    "expected_documents": [
+      "04_pricing_guidelines.pdf"
+    ]
+  },
+  {
+    "question": "What discount limit was allowed by Promotion Policy Version 3?",
+    "expected_documents": [
+      "05_promotion_policy_v3.docx"
+    ]
+  },
+  {
+    "question": "What discount limit applies in Promotion Policy Version 5?",
+    "expected_documents": [
+      "06_promotion_policy_v5.txt"
+    ]
+  },
+  {
+    "question": "Compare Promotion Policy Version 3 and Version 5 approval rules",
+    "expected_documents": [
+      "06_promotion_policy_v5.txt"
+    ]
+  },
+  {
+    "question": "How do suppliers notify Procurement about delivery delays?",
+    "expected_documents": [
+      "07_vendor_agreement.pdf"
+    ]
+  },
+  {
+    "question": "How are suppliers onboarded?",
+    "expected_documents": [
+      "07_vendor_agreement.pdf"
+    ]
+  },
+  {
+    "question": "Which attributes belong to a product master record?",
+    "expected_documents": [
+      "08_product_catalog_guidance.docx"
+    ]
+  },
+  {
+    "question": "How are SKU corrections managed?",
+    "expected_documents": [
+      "08_product_catalog_guidance.docx"
+    ]
+  },
+  {
+    "question": "What data is captured for customer complaints?",
+    "expected_documents": [
+      "09_customer_service_manual.txt"
+    ]
+  },
+  {
+    "question": "How is the returns rate calculated?",
+    "expected_documents": [
+      "09_customer_service_manual.txt"
+    ]
+  },
+  {
+    "question": "What triggers shipment exception escalation?",
+    "expected_documents": [
+      "10_logistics_sop.pdf"
+    ]
+  },
+  {
+    "question": "What information is needed for a warehouse transfer?",
+    "expected_documents": [
+      "10_logistics_sop.pdf"
+    ]
+  },
+  {
+    "question": "What fields are mandatory for a purchase order?",
+    "expected_documents": [
+      "11_procurement_guidelines.docx"
+    ]
+  },
+  {
+    "question": "How should delayed purchase orders be investigated?",
+    "expected_documents": [
+      "11_procurement_guidelines.docx"
+    ]
+  },
+  {
+    "question": "What checks are needed before putting promotion displays on shelves?",
+    "expected_documents": [
+      "12_merchandising_guidelines.txt"
+    ]
+  },
+  {
+    "question": "How do planners use demand forecasts?",
+    "expected_documents": [
+      "13_supply_chain_report.pdf"
+    ]
+  },
+  {
+    "question": "Which actions help resolve Product P100 shortage?",
+    "expected_documents": [
+      "13_supply_chain_report.pdf"
+    ]
+  },
+  {
+    "question": "What is the proof of purchase requirement for returns?",
+    "expected_documents": [
+      "14_store_returns_policy.docx"
+    ]
+  },
+  {
+    "question": "How are inventory cycle-count variances investigated?",
+    "expected_documents": [
+      "15_inventory_cycle_count.txt"
+    ]
+  },
+  {
+    "question": "What categories are used to group customer complaints?",
+    "expected_documents": [
+      "16_customer_complaints_trends.pdf"
+    ]
+  },
+  {
+    "question": "How should product complaint trends be escalated?",
+    "expected_documents": [
+      "16_customer_complaints_trends.pdf"
+    ]
+  }
+]

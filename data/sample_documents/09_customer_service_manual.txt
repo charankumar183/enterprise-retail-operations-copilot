@@ -1,0 +1,11 @@
+Customer Service and Returns Manual
+SYNTHETIC DEMONSTRATION DATA — NOT AN OFFICIAL RETAIL POLICY
+
+1. Customer complaints
+Log product SKU, complaint description, customer reference, opening date and resolution owner. Do not assume that repeated complaints prove a defect without investigation.
+
+2. Return acceptance
+Store teams inspect returned goods, verify the purchase and record the quantity, date, reason and SKU in the returns system. Refund decisions must follow the active local store returns terms.
+
+3. Return rate analysis
+For the academic dataset, return rate is calculated as returned units divided by sold units during the requested period; results over 100 percent can occur when return and sale windows differ and must be flagged.

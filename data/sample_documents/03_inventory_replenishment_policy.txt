@@ -1,0 +1,11 @@
+Inventory Replenishment and Stockout Policy
+SYNTHETIC DEMONSTRATION DATA — NOT AN OFFICIAL RETAIL POLICY
+
+1. Reorder thresholds
+For the synthetic demonstration network, store shelf stock is reviewed when available units fall below 20 and warehouse stock below 35. The SQL table inventory.reorder_point is authoritative per location and can override these default planning examples.
+
+2. Product P100 incident
+Product P100 has a recurring shortage simulation caused by high demand and delayed replenishment purchase orders. Investigate recent sales velocity, supply lead time, warehouse holdings, pending purchase orders and store transfer possibilities before concluding a root cause.
+
+3. Replenishment checklist
+Confirm the SKU, store code, available stock and pending purchase orders; compare seven-day demand with forecast, identify receiving delays, request warehouse transfer where eligible, and record the replenishment owner and target date.

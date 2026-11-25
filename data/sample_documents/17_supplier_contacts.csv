@@ -1,0 +1,4 @@
+supplier_code,supplier_name,region,contact
+S001,Supplier 01 Logistics,South,vendor1@example.test
+S002,Supplier 02 Logistics,East,vendor2@example.test
+S003,Supplier 03 Logistics,West,vendor3@example.test

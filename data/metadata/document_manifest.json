@@ -1,0 +1,146 @@
+[
+  {
+    "filename": "01_store_operations_sop.pdf",
+    "title": "Store Operations Standard Operating Procedure",
+    "department": "Operations",
+    "region": "All",
+    "version": "1",
+    "is_synthetic": true
+  },
+  {
+    "filename": "02_warehouse_receiving_manual.docx",
+    "title": "Warehouse Receiving and Putaway Manual",
+    "department": "Warehouse",
+    "region": "All",
+    "version": "1",
+    "is_synthetic": true
+  },
+  {
+    "filename": "03_inventory_replenishment_policy.txt",
+    "title": "Inventory Replenishment and Stockout Policy",
+    "department": "Inventory",
+    "region": "All",
+    "version": "1",
+    "is_synthetic": true
+  },
+  {
+    "filename": "04_pricing_guidelines.pdf",
+    "title": "Retail Pricing and Price Change Guidelines",
+    "department": "Pricing",
+    "region": "All",
+    "version": "1",
+    "is_synthetic": true
+  },
+  {
+    "filename": "05_promotion_policy_v3.docx",
+    "title": "Promotion Policy \u2014 Version 3",
+    "department": "Marketing",
+    "region": "All",
+    "version": "3",
+    "is_synthetic": true
+  },
+  {
+    "filename": "06_promotion_policy_v5.txt",
+    "title": "Promotion Policy \u2014 Version 5",
+    "department": "Marketing",
+    "region": "All",
+    "version": "5",
+    "is_synthetic": true
+  },
+  {
+    "filename": "07_vendor_agreement.pdf",
+    "title": "Supplier and Vendor Agreement \u2014 Synthetic",
+    "department": "Procurement",
+    "region": "All",
+    "version": "1",
+    "is_synthetic": true
+  },
+  {
+    "filename": "08_product_catalog_guidance.docx",
+    "title": "Product Catalog Data Standards",
+    "department": "Merchandising",
+    "region": "All",
+    "version": "1",
+    "is_synthetic": true
+  },
+  {
+    "filename": "09_customer_service_manual.txt",
+    "title": "Customer Service and Returns Manual",
+    "department": "Customer Service",
+    "region": "All",
+    "version": "1",
+    "is_synthetic": true
+  },
+  {
+    "filename": "10_logistics_sop.pdf",
+    "title": "Logistics and Shipment Exception SOP",
+    "department": "Logistics",
+    "region": "All",
+    "version": "1",
+    "is_synthetic": true
+  },
+  {
+    "filename": "11_procurement_guidelines.docx",
+    "title": "Procurement and Purchase Order Guidelines",
+    "department": "Procurement",
+    "region": "All",
+    "version": "1",
+    "is_synthetic": true
+  },
+  {
+    "filename": "12_merchandising_guidelines.txt",
+    "title": "Merchandising and Shelf Execution Guidelines",
+    "department": "Merchandising",
+    "region": "All",
+    "version": "1",
+    "is_synthetic": true
+  },
+  {
+    "filename": "13_supply_chain_report.pdf",
+    "title": "Supply Chain Exception and Demand Report",
+    "department": "Supply Chain",
+    "region": "All",
+    "version": "1",
+    "is_synthetic": true
+  },
+  {
+    "filename": "14_store_returns_policy.docx",
+    "title": "Store Returns and Customer Refund Policy",
+    "department": "Customer Service",
+    "region": "All",
+    "version": "1",
+    "is_synthetic": true
+  },
+  {
+    "filename": "15_inventory_cycle_count.txt",
+    "title": "Inventory Cycle Count and Variance Procedure",
+    "department": "Inventory",
+    "region": "All",
+    "version": "1",
+    "is_synthetic": true
+  },
+  {
+    "filename": "16_customer_complaints_trends.pdf",
+    "title": "Customer Complaints Trends \u2014 Synthetic Monthly Brief",
+    "department": "Customer Service",
+    "region": "All",
+    "version": "1",
+    "is_synthetic": true
+  },
+  {
+    "filename": "17_supplier_contacts.csv",
+    "title": "Synthetic Supplier Contacts",
+    "department": "Procurement",
+    "version": "1",
+    "region": "All",
+    "is_synthetic": true
+  },
+  {
+    "filename": "18_store_replenishment_plan.xlsx",
+    "title": "Synthetic Store Replenishment Plan",
+    "department": "Inventory",
+    "region": "All",
+    "version": "1",
+    "is_synthetic": true
+  }
+]

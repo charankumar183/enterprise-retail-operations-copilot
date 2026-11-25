@@ -1,8 +1,0 @@
-# Standard Operating Procedure: Logistics Fleet & Inter-Facility Stock Transfers
-**Document ID:** SOP-LOG-088 | **Department:** Global Supply Chain & Transportation
-
-## Section 1: Warehouse-to-Store Delivery Windows
-Dedicated fleet trailers dispatch daily from central fulfillment hubs to regional retail stores.
-1. Delivery appointments must be booked in 2-hour delivery windows.
-2. High-volume stores like Store 105 operate cross-dock drops twice daily (05:00 AM and 14:00 PM).
-3. All pallets must be shrink-wrapped with corner protectors and verified against trailer load manifests.

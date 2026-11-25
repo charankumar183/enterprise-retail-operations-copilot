@@ -1,0 +1,49 @@
+id,employee_code,store_id,department,role
+1,E00001,2,Receiving,Associate
+2,E00002,3,Receiving,Associate
+3,E00003,4,Customer Service,Associate
+4,E00004,5,Merchandising,Associate
+5,E00005,1,Merchandising,Associate
+6,E00006,2,Logistics,Associate
+7,E00007,3,Logistics,Associate
+8,E00008,4,Logistics,Associate
+9,E00009,5,Logistics,Associate
+10,E00010,1,Merchandising,Associate
+11,E00011,2,Customer Service,Associate
+12,E00012,3,Receiving,Associate
+13,E00013,4,Logistics,Associate
+14,E00014,5,Receiving,Associate
+15,E00015,1,Receiving,Associate
+16,E00016,2,Logistics,Associate
+17,E00017,3,Customer Service,Associate
+18,E00018,4,Logistics,Associate
+19,E00019,5,Merchandising,Associate
+20,E00020,1,Logistics,Associate
+21,E00021,2,Receiving,Associate
+22,E00022,3,Receiving,Associate
+23,E00023,4,Customer Service,Associate
+24,E00024,5,Merchandising,Associate
+25,E00025,1,Customer Service,Associate
+26,E00026,2,Logistics,Associate
+27,E00027,3,Customer Service,Associate
+28,E00028,4,Logistics,Associate
+29,E00029,5,Receiving,Associate
+30,E00030,1,Customer Service,Associate
+31,E00031,2,Merchandising,Associate
+32,E00032,3,Customer Service,Associate
+33,E00033,4,Customer Service,Associate
+34,E00034,5,Receiving,Associate
+35,E00035,1,Customer Service,Associate
+36,E00036,2,Merchandising,Associate
+37,E00037,3,Logistics,Associate
+38,E00038,4,Customer Service,Associate
+39,E00039,5,Receiving,Associate
+40,E00040,1,Merchandising,Associate
+41,E00041,2,Logistics,Associate
+42,E00042,3,Receiving,Associate
+43,E00043,4,Receiving,Associate
+44,E00044,5,Merchandising,Associate
+45,E00045,1,Merchandising,Associate
+46,E00046,2,Merchandising,Associate
+47,E00047,3,Merchandising,Associate
+48,E00048,4,Receiving,Associate

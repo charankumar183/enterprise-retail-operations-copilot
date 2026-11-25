@@ -1,6 +1,0 @@
-# Strategic Sourcing & Procurement Guidelines
-**Document ID:** PROC-GUIDE-101 | **Department:** Global Procurement
-
-## Section 3: Dual Sourcing Mandate for Tier-1 Essential SKUs
-To mitigate supplier delivery delays and regional stockouts, all Tier-1 consumer packaged goods categories must maintain secondary active vendors capable of meeting at least 35% of total volume requirements.
-Suppliers with reliability scores below 85% are placed on probationary review.
